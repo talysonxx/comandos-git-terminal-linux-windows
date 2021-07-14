@@ -40,6 +40,8 @@ depois de criar o repositório remoto no git, passe os seguintes comandos para r
 git remote add origin linkDoRepositorioDoGitHub.git
 (adicionando repositório remoto ao servidor)
 
+git branch -M main
+
 git remote -v
 (lista urls dos repositórios remotos)
 

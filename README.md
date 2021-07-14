@@ -53,13 +53,11 @@ _pra mudar (apagar):_
 
 * git remote add origin linkDoRepositorioDoGitHub.git
   (adicionando repositório remoto ao servidor)
-
+* git branch -M main
 * git remote -v
   (lista urls dos repositórios remotos)
-
 * git push -u origin main
   (levando commits do remoto para o servidor)
-
 * git pull origin main
   (trazendo commits do servidor para o local)
 
