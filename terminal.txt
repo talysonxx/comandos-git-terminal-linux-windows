@@ -1,0 +1,8 @@
+windows / unix
+cd (entrar num diretório)
+dir = ls /-a (listar arquivos dentro do diretório)
+mkdir = mkdir (criar um diretório)
+del/rmdir /s /q = rm -rf (apagar um arquivo ou um diretório)
+echo hello > hello.txt (criar um arquivo com hello e nome hello.txt)
+* = mv origem destino
+* = echo > nomedoarquivo.txt

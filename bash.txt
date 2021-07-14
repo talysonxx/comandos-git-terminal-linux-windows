@@ -1,0 +1,4 @@
+openssl sha1 nome-do-arquivo.txt
+
+echo "ola mundo" | openssl sha1
+

@@ -1,0 +1,127 @@
+primeira vez no git:
+{
+git config --global user.email "email@gmail"
+git config --global user.name "nome"
+
+pra mudar:
+git config --global --unset user.email
+git config --global --unset user.name
+
+git config --list
+
+git config --global core.editor code -wait
+git config --global core.editor subl -wait
+(adicionando editor no git)
+
+git config user.name
+git config user.email
+git config user.core.editor
+}
+
+==================
+
+criando um repositorio local:
+{
+git init (inicio)
+
+git add *
+git add .
+(adiciono todos os arquivos no git)
+
+git status
+
+git commit -m "mensagem do commit"
+}
+
+================
+
+depois de criar o repositório remoto no git, passe os seguintes comandos para relacioná-lo ao remoto:
+{
+git remote add origin linkDoRepositorioDoGitHub.git
+(adicionando repositório remoto ao servidor)
+
+git remote -v
+(lista urls dos repositórios remotos)
+
+git push -u origin main
+(levando commits do remoto para o servidor)
+
+git pull origin main
+(trazendo commits do servidor para o local)
+}
+
+===========================
+
+trazendo do remoto para o local:
+{
+git clone linkNoGitHub.git nomeDaPastaOndeVãoFicarOsArquivos
+}
+
+==========
+
+:
+}
+git diff
+(vejo as alterações no arquivo)
+
+git log -1
+(histórico de commits, "q" para fechar; último commit)
+}
+
+=============
+
+caso você queira ignorar um arquivo ao fazer o commit:
+{
+echo > .gitignore
+(criando um arquivo .gitignore; nele você adiciona quais você não quer rastrar, exemplo: test_2.html/)
+}
+
+============
+
+voltando em algum ponto da história:
+{
+git log
+
+git checkout codigoDoCommit
+(voltando pro passado, no tempo do commit)
+
+git checkout main
+(voltando pro presente)
+}
+
+================
+
+criando ramificações:
+{
+git branch
+(lista as ramificações)
+
+git branch nomeDaRamificação
+(cria uma ramificação com esse nome)
+
+git checkout nomeDaRamificação
+(entra na ramificação com o nome)
+}
+
+========
+
+fazendo merges:
+{
+(fique dentro da ramificação em que você quer que tu vá pra ela)
+git murge nomeDaRamificação
+}
+
+==========
+
+deletando branchs:
+{
+git branch -D nomeDaRamificação
+}
+
+=============
+
+:
+{
+
+
+}
