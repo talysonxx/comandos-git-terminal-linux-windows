@@ -1,0 +1,7 @@
+tenha o node e npm atualizados para evitar quaisquer turbulências
+
+npx create-react-app nomeDaPasta
+
+cd nomeDaPasta
+
+npm start
