@@ -5,3 +5,16 @@ npx create-react-app nomeDaPasta
 cd nomeDaPasta
 
 npm start
+
+=========
+
+caso já tenha o package
+npm install
+
+npm start
+
+=========
+
+npm init
+
+npm install --save react@version react-dom@version react-scripts@version
