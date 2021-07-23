@@ -1,0 +1,76 @@
+npm init -y
+
+npm i webpack webpack-cli webpack-dev-server
+
+criação do arquivo webpack.config.js
+com o conteúdo:
+=============================
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
+
+const PUBLIC_DIR = 'public'
+
+module.exports = {
+	devServer: {
+		contentBase: path.join(__dirname, PUBLIC_DIR),
+		hot: true,
+		port: 3340
+	},
+	entry: path.resolve(__dirname, 'src', 'main.js'),
+	mode: 'development',
+	module: {
+		rules: [
+			{
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				query: {
+					presets: [
+						'@babel/preset-env'
+					]
+				},
+				test: /\.js$/
+			},
+			{
+				exclude: /node_modules/,
+				test: /\.css$/,
+				use: [
+					{ loader: 'style-loader' },
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true
+						}
+					}
+				]
+			}
+		]
+	}
+	output: {
+		filename: '{name}-{hash}.js',
+		path: path.resolve(__dirname, 'dist')	
+	},
+	plugins: [
+		new HTMLWebpackPlugin({
+			template: path.resolve(__dirname, PUBLIC_DIR, 'index.html')
+		}),
+		new webpack.HotModuleReplacementPlugin()
+	],
+	target: 'web'
+}
+===============================
+
+vá ao package.json, em scripts e adicione:
+"start": "webpack-dev-server"
+
+crie a pasta src e dentro dela o arquivo main.js (ou index.js, se tiver colado no webpack)
+
+crie a pasta public e dentro dela o arquivo index.html
+
+npm i @babel/core @babel/preset-env babel/loader css-loader style-loader
+
+npm i html-webpack-plugin
+
+npm start
+
+(importe os arquivos css no main.js (index.js))
