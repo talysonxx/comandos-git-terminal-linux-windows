@@ -5,7 +5,7 @@ npm i webpack webpack-cli webpack-dev-server
 criação do arquivo webpack.config.js
 com o conteúdo:
 =============================
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 
@@ -51,7 +51,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist')	
 	},
 	plugins: [
-		new HTMLWebpackPlugin({
+		new HHtmlWebPackPlugin({
 			template: path.resolve(__dirname, PUBLIC_DIR, 'index.html')
 		}),
 		new webpack.HotModuleReplacementPlugin()
