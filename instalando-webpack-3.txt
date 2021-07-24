@@ -1,0 +1,93 @@
+npm init -y
+
+npm install --save-dev webpack webpack-cli
+
+npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react
+
+crie um arquivo .babelrc na raiz com o conteúdo
+======
+{
+	"presets": [
+		"@babel/preset-env",
+		"@babel/preset-react"
+	]
+}
+======
+
+crie o arquivo webpac.config.js na raiz com o conteúdo
+======
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /nod_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            }
+        ]
+    }
+}
+======
+
+npm install --save react react-dom
+
+crie um pasta src na raiz e dentro dela um arquivo index.js com conteúdo de sua aplicação, ex
+=======
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const App = () => {
+    return(
+        <h1>NavBar</h1>
+    )
+}
+
+const container = document.getElementById('root')
+
+container ? ReactDOM.render(<App />, container) : false
+=====
+
+crie uma pasta public na raiz e dentro dela um documento index.html que contenha uma div com o id root
+
+npm install --save-dev html-webpack-plugin html-loader
+
+edite o arquivo webpack.config.js
+====
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /nod_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.html$/,
+                user: {
+                    loader: "html-loader"
+                }
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            "template": "./public/index.html",
+            "filename": "./index.html"
+        })
+    ]
+}
+====
+
+adicione no package.json na parte dos scripts
+====
+"build": "webpack --mode production"
+=====
+
+npm run build
+
