@@ -1,0 +1,28 @@
+npm init -y
+
+npm install --save-dev eslint
+
+./node_modules/.bin/eslint --init
+
+escolha uma das três maneiras que desejas padronizar
+
+qualquer erro no comando, utilize no powershell no modo admin
+====
+get-executionpolicy unrestricted
+=====
+
+./node_modules/.bin/eslint .
+(escaneie o código a fim de encontrar possíveis erros)
+
+./node_modules/.bin/eslint  . --fix
+(resolver os erros)
+
+no package.json, em scripts
+===
+"lint": "./node_modules/.bin/eslint ."
+=======
+
+npm run lint
+
+crie um arquivo na raiz .eslintignore, no conteúdo você adiciona as pastas e arquivos que queres que ele ignore
+(por padrão o node_modules é ignorado)
