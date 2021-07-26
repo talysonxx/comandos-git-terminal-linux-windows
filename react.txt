@@ -1,19 +1,32 @@
 tenha o node e npm atualizados para evitar quaisquer turbulências
 
+Sumário
+npm init - cria a pasta package.json
+npm install - instala as dependências (só funciona se já tiver dado npm init ou caso já tenha a pasta package.json)
+npm start - inicia o servidor
+npx create-react-app - baixa o pacote package.json e o instala (união entre init e install)
+
+método recomendável
 npx create-react-app nomeDaPasta
 
 cd nomeDaPasta
 
 npm start
 
+ou
+
 =========
 
-caso já tenha o package
+caso já tenha o package.json
+(caso não tenha, digite npm init)
+
 npm install
 
 npm start
 
 =========
+
+ou
 
 npm init
 
