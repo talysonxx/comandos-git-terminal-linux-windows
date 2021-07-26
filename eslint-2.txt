@@ -1,0 +1,89 @@
+npx create-react-app
+
+npm i eslint -D
+
+npx eslint --init
+(agora escolha como você quer; pode pegar um pronto ou ir editando você mesmo as regras; lembrando que elas podem ser editadas posteriomente)
+
+instale a extensão eslint no vscode
+
+adicione regras ao arquivo .eslintrc em rules:
+======
+"react/react-in-jsx-scope": "off",
+"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+=======
+
+nas configurações do seu vscode, (cntrl + shift + p, em open settings (UI)); code actions on save, em settings.json adicione (ou substitua) o seguinte código (para ele sempre que salvar já concertar os erros)
+===========
+"editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+========
+
+instalando prettier
+npm i prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+
+
+depois de env no .eslintrc, adicione
+=======
+"parser": "babel-eslint",
+====
+
+em extends no .eslintrc, coloque
+========
+"prettier",
+"prettier/react"
+=======
+
+em plugin no .eslintrc
+=========
+"prettier"
+====
+
+em rules
+=====
+"prettier/prettier": "error"
+======
+
+na raiz, crie um arquivo .prettierrc
+=======
+{
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 2
+}
+==========
+
+
+instale a extensão editorconfig
+
+=====
+regras minhas
+"semi": ["error", "never"]
+(sem ponto e vírgula)
+"quotes": ["error", "single"]
+(aspas simples)
+"indent": ["error", 4]
+(4 espaços de indentação)
+======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
