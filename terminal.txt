@@ -1,4 +1,4 @@
-windows / unix
+windows || unix
 cd (entrar num diretório)
 dir || ls /-a (listar arquivos dentro do diretório)
 mkdir || mkdir (criar um diretório)
