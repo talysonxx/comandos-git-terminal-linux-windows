@@ -1,8 +1,15 @@
 windows / unix
 cd (entrar num diretório)
-dir = ls /-a (listar arquivos dentro do diretório)
-mkdir = mkdir (criar um diretório)
-del/rmdir /s /q = rm -rf (apagar um arquivo ou um diretório)
+dir || ls /-a (listar arquivos dentro do diretório)
+mkdir || mkdir (criar um diretório)
+del/rmdir /s /q || rm -rf (apagar um arquivo ou um diretório)
 echo hello > hello.txt (criar um arquivo com hello e nome hello.txt)
-* = mv origem destino
-* = echo > nomedoarquivo.txt
+* || mv origem destino
+echo > nomedoarquivo.txt
+mode con:cols=x lines=y || * (definir tamanho do prompt)
+type arquivo.txt || cat arquivo.txt
+title || *
+echo off/on || *
+algo | clip || *
+(copia algo para a área de transferência)
+date/time \t || *
