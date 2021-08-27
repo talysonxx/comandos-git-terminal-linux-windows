@@ -84,7 +84,7 @@ voltando em algum ponto da história:
 {
 git log
 
-git checkout codigoDoCommit
+git checkout codigoDoCommit/nomeDaBranch
 (voltando pro passado, no tempo do commit)
 
 git checkout main
@@ -100,6 +100,9 @@ git branch
 
 git branch nomeDaRamificação
 (cria uma ramificação com esse nome)
+
+git branch -m novoNome
+(renomeia uma ramificação)
 
 git checkout nomeDaRamificação
 (entra na ramificação com o nome)
