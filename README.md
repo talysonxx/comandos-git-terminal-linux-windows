@@ -101,8 +101,8 @@ _pra mudar (apagar):_
 
 **Fazendo merges (unindo branchs):**
 
-* (fique dentro da ramificação em que você quer que tu vá pra ela)
-  git murge nomeDaRamificação
+* git murge nomeDaRamificação
+  (fique dentro da ramificação em que você quer que tu vá pra ela)
 
 **Deletando branchs:**
 
@@ -110,4 +110,4 @@ _pra mudar (apagar):_
 
 **:**
 
-* xxxx
+* xxxx (em breve mais comandos)
