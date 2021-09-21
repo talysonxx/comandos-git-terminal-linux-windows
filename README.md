@@ -13,7 +13,7 @@
 **Primeira vez no git:**
 
 * git config --global user.email "email@gmail"
-* git config --global user.name "nome"
+* git config --global user.name "nomeUsuário"
 
 _pra mudar (apagar):_
 
@@ -25,16 +25,22 @@ _pra mudar (apagar):_
   (lista as configurações)
 
 * git config --global core.editor code -wait
-  (visual studio code)
+  (adicionando editor no git; vscode)
 
 * git config --global core.editor subl -wait
   (adicionando editor no git; sublime text)
 
 * git config user.name
 
+  (lista nome do usuário)
+
 * git config user.email
 
+  (lista email do usuário)
+
 * git config user.core.editor
+
+  (lista editor padrão do git (vscode, sublime, etc))
 
 **Criando um repositorio local:**
 
